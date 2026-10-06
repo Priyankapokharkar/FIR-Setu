@@ -1,0 +1,8 @@
+graph TD
+    User((Citizen)) -->|Submit Application| System[FIRSETU System]
+    System -->|Validate & Classify| ML[ML Unit]
+    ML -->|Case Categorization| System
+    System -->|Notify| Constable((Police Constable))
+    Constable -->|Review & Action| System
+    System -->|Status & PDF| User
+    System <--> DB[(Database)]

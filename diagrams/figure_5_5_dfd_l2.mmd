@@ -1,0 +1,6 @@
+graph TD
+    Input[User Input Form] --> Valid[Validation Service]
+    Valid --> Extract[Text Extraction]
+    Extract --> Pred[IPC Prediction - ML]
+    Pred --> Store[Database Commit]
+    Store --> Notify[Notification Dispatch]

@@ -1,0 +1,11 @@
+sequenceDiagram
+    participant C as Citizen
+    participant S as Server
+    participant M as ML Module
+    participant D as Database
+    C->>S: Submit Application
+    S->>M: POST /predict (Crime Text)
+    M-->>S: Suggested IPC Sections
+    S->>D: Save Application + Prediction
+    D-->>S: OK
+    S-->>C: Application Submitted successfully

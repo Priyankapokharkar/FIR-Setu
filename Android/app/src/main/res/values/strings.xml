@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">FIR SETU</string>
+    <string name="welcome_message">Empowering Justice, Simplifying Processes</string>
+    <string name="login_title">Welcome Back</string>
+    <string name="email_hint">Email Address</string>
+    <string name="password_hint">Password</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_signup">Don\'t have an account? Sign Up</string>
+    
+    <string name="dashboard_user">Citizen Dashboard</string>
+    <string name="dashboard_constable">Officer Dashboard</string>
+    <string name="fill_application">File an Application</string>
+    <string name="application_status">Track Status</string>
+    <string name="fir_comparison">FIR Insights</string>
+    <string name="legal_assistant">AI Legal Assistant</string>
+</resources>

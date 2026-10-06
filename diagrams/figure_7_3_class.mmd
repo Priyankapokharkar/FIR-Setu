@@ -1,0 +1,19 @@
+classDiagram
+    class User {
+        +String name
+        +String email
+        +String role
+    }
+    class Application {
+        +ObjectId user
+        +String description
+        +String status
+        +String predictedIpc
+    }
+    class FIR {
+        +ObjectId applicationId
+        +String pdfPath
+        +Date issuedDate
+    }
+    User "1" -- "0..*" Application
+    Application "1" -- "0..1" FIR

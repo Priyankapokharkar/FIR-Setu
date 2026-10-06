@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/background_light">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FIR Insights"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AI Comparison Report:"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:layout_marginBottom="8dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Raw Comparison Table -->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1,2"
+                android:layout_marginBottom="16dp"
+                android:background="@color/card_stroke"
+                android:padding="1dp"
+                android:divider="@color/card_stroke"
+                android:showDividers="middle">
+
+                <!-- Header -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Field"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        android:background="@drawable/table_header_border"
+                        android:textColor="@color/text_primary" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Ai Generated Section"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        android:background="@drawable/table_header_border"
+                        android:textColor="@color/text_primary" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Police Direct Draft Fir Section"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        android:background="@drawable/table_header_border"
+                        android:textColor="@color/text_primary" />
+                </TableRow>
+
+                <!-- Status Row -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Status"
+                        android:padding="10dp"
+                        android:background="@drawable/table_cell_border"
+                        android:textColor="@color/text_secondary" />
+                    <TextView
+                        android:id="@+id/tvStatus"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_span="2"
+                        android:text="Checking..."
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        android:background="@drawable/table_cell_border"
+                        android:textColor="@color/text_primary" />
+                </TableRow>
+
+                <!-- Category Row -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Category"
+                        android:padding="10dp"
+                        android:background="@drawable/table_cell_border"
+                        android:textColor="@color/text_secondary" />
+                    <TextView
+                        android:id="@+id/tvOriginalCategory"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="N/A"
+                        android:padding="10dp"
+                        android:background="@drawable/table_cell_border"
+                        android:textColor="@color/text_primary" />
+                    <TextView
+                        android:id="@+id/tvFirCategory"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="N/A"
+                        android:padding="10dp"
+                        android:background="@drawable/table_cell_border"
+                        android:textColor="@color/text_primary" />
+                </TableRow>
+
+                <!-- IPC/BNS Sections Row -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="IPC/BNS"
+                        android:padding="10dp"
+                        android:background="@drawable/table_cell_border"
+                        android:textColor="@color/text_secondary" />
+                    <TextView
+                        android:id="@+id/tvRecommendedSections"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="N/A"
+                        android:padding="10dp"
+                        android:background="@drawable/table_cell_border"
+                        android:textColor="@color/text_primary" />
+                    <TextView
+                        android:id="@+id/tvFirSections"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="N/A"
+                        android:padding="10dp"
+                        android:background="@drawable/table_cell_border"
+                        android:textColor="@color/text_primary" />
+                </TableRow>
+            </TableLayout>
+
+
+            <!-- Keyword Concepts -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Factual Keyword Analysis"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="8dp"/>
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupKeywords"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:chipSpacing="8dp">
+                <!-- Chips added dynamically -->
+            </com.google.android.material.chip.ChipGroup>
+
+            <!-- Description Comparison -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Source Description Comparison"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_rounded_border"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Original Application:"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"/>
+                <TextView
+                    android:id="@+id/tvOriginalDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Loading..."
+                    android:textColor="@color/text_primary"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="8dp"/>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/card_stroke" android:layout_marginVertical="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FIR Text Analysis:"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"/>
+                <TextView
+                    android:id="@+id/tvFirDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Loading..."
+                    android:textColor="@color/text_primary"
+                    android:textSize="13sp"/>
+            </LinearLayout>
+
+            <!-- Accuracy Metric -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/card_stroke">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="LawyerApp Model Accuracy"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp"
+                            android:layout_alignParentStart="true"/>
+
+                        <TextView
+                            android:id="@+id/tvAccuracyPercentage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0%"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp"
+                            android:layout_alignParentEnd="true"/>
+                    </RelativeLayout>
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/progressAccuracy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:progress="0"
+                        app:trackThickness="8dp"
+                        app:trackCornerRadius="4dp"
+                        app:indicatorColor="@color/colorPrimary"
+                        app:trackColor="@color/card_stroke"/>
+
+                    <TextView
+                        android:id="@+id/tvAccuracyDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Based on legal section match and factual consistency."
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Summary -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Legal Audit Summary"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/tvComparisonReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_rounded_border"
+                android:padding="12dp"
+                android:text="Processing analysis..."
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/layoutPdfActions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="24dp"
+                android:visibility="gone">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnGeneratePdf"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="Generate FIR PDF (Online)"
+                    android:layout_marginBottom="12dp"
+                    app:cornerRadius="12dp"
+                    app:icon="@android:drawable/ic_menu_save"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnUploadManualPdf"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="Upload Manual FIR (Offline Mode)"
+                    app:cornerRadius="12dp"
+                    app:icon="@android:drawable/ic_menu_upload"/>
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_marginTop="20dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

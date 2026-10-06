@@ -1,0 +1,13 @@
+{
+  "name": "lawyerapp-root",
+  "version": "1.0.0",
+  "description": "Unified startup for LawyerApp Backend and ML Service",
+  "scripts": {
+    "start:ml": "cd ml_module && python app.py",
+    "start:backend": "cd Backend && npm run dev",
+    "start": "concurrently \"npm run start:ml\" \"npm run start:backend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

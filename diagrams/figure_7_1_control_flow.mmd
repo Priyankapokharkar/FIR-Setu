@@ -1,0 +1,7 @@
+stateDiagram-v2
+    [*] --> Idle
+    Idle --> Auth: Login Request
+    Auth --> Processing: Authenticated
+    Processing --> ML_Unit: Analyze Text
+    ML_Unit --> Response: Success
+    Response --> Idle

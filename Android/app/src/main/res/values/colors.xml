@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background_light">#F5F7FA</color>
+    
+    <!-- Primary Blue -> Trust, Law -->
+    <color name="colorPrimary">#1A365D</color>
+    <color name="colorPrimaryDark">#0F1E36</color>
+    <color name="colorAccent">#D4AF37</color> <!-- Gold for accents -> Premium -->
+
+    <!-- Status Colors -->
+    <color name="status_pending">#F59E0B</color>
+    <color name="status_approved">#10B981</color>
+    <color name="status_rejected">#EF4444</color>
+
+    <color name="text_primary">#111827</color>
+    <color name="text_secondary">#6B7280</color>
+    
+    <!-- Card & Surface -->
+    <color name="surface_color">#FFFFFF</color>
+    <color name="card_stroke">#E5E7EB</color>
+</resources>

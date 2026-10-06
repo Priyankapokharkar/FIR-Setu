@@ -1,0 +1,8 @@
+pandas
+scikit-learn
+joblib
+flask
+flask-cors
+torch
+transformers
+# Use a simple Flask server to provide the API

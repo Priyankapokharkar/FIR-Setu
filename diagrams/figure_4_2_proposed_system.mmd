@@ -1,0 +1,7 @@
+graph LR
+    User((Citizen)) <--> |Android App| Backend[Node.js Backend]
+    Constable((Police Constable)) <--> |Android App| Backend
+    Backend <--> |API| ML[ML Module - Case Classifier]
+    Backend <--> |API| AI[Gemini AI Chatbot]
+    Backend <--> |Mongoose| DB[(MongoDB)]
+    Backend --> |PDFKit| FIR[Digital FIR PDF]

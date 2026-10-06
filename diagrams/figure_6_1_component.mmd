@@ -1,0 +1,33 @@
+﻿graph TD
+    subgraph "Android Application"
+        UI[UI Components]
+        VM[ViewModel / Adapters]
+        NET[Network Layer - Retrofit]
+    end
+    subgraph "Node.js Backend"
+        API[Express API]
+        AUTH[Auth Middleware]
+        CONT[Controllers]
+        MODELS[Mongoose Models]
+    end
+    subgraph "ML Service"
+        PY[Python Flask/FastAPI]
+        CASE[Case Classifiers]
+        MODEL[Legal Model]
+    end
+    subgraph "External Services"
+        GEMINI[Google Gemini AI]
+        DB[(MongoDB)]
+    end
+
+    UI --> VM
+    VM --> NET
+    NET <--> API
+    API --> AUTH
+    AUTH --> CONT
+    CONT --> MODELS
+    MODELS <--> DB
+    CONT <--> PY
+    PY --> CASE
+    CASE --> MODEL
+    CONT <--> GEMINI

@@ -1,0 +1,8 @@
+graph TD
+    Citizen --> Auth[Authentication Process]
+    Auth --> App[Application Submission]
+    App --> ML[ML Classification]
+    ML --> DB[(Application Store)]
+    DB --> Rev[Constable Review]
+    Rev --> PDF[PDF Generation]
+    PDF --> User

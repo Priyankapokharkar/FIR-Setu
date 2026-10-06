@@ -1,0 +1,10 @@
+graph TD
+    Start((Start)) --> Login[Login]
+    Login --> Auth{Authenticated?}
+    Auth -->|No| Login
+    Auth -->|Yes| Dash[Dashboard]
+    Dash --> Form[Fill FIR Form]
+    Form --> ML[Run ML Prediction]
+    ML --> Submit[Submit to Review]
+    Submit --> Wait[Wait for Constable]
+    Wait --> Done((End))
